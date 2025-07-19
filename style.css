@@ -5,14 +5,15 @@
 
 body {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    background-color: #666;
 }
 
 .frame {
-    width: 30%;
+    min-width: max-content;
+    width: fit-content;
     background-color: aquamarine;
-    border: 2px solid black;
     margin: 10px;
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -20,23 +21,32 @@ body {
 }
 
 .display {
+    font-family: 'Seven Segment', sans-serif;                                            
+    min-width: fit-content;
     width: auto;
-    height: 50px;
+    min-height: 50px;
+    height: 12vh;
     background-color: darkgrey;
-    font-size: 40px;
     font-weight: 800;
-    text-align: right;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
 
+    display: flex;
+    align-items: center; /* Vertical center alignment */
+    justify-content: flex-end; /* Horizontal center alignment */
 }
 
 .buttons {
+    width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    flex: 1;
+    padding: 10px 0 0 0;
 }
 
 .row {
+    width: fit-content;
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -44,18 +54,36 @@ body {
 }
 
 button {
-    width: 6vw;
-    aspect-ratio : 1 / 1;
-    border-radius: 50%;
+    min-width: 50px;
+    width: 12vh;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
     background-color: cadetblue;
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 900;
+    border: 0;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: rgb(13, 240, 248);
+}
+
+.animate {
+  background-color: rgb(13, 240, 248);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .row:first-child {
-    margin: 0 0 0 auto;
+    justify-content: flex-end;
 }
 
-#empty {
-    display: none;
+button:focus {
+    outline: none;
+    box-shadow: none;
+    border: none; /* optional, if your border changes on focus */
 }
+
+
