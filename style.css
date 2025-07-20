@@ -7,17 +7,18 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #666;
+    background-color: #111827;
 }
 
 .frame {
     min-width: max-content;
     width: fit-content;
-    background-color: aquamarine;
+    background-color: #22272e;
     margin: 10px;
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
+    margin: 10px auto;   
 }
 
 .display {
@@ -58,7 +59,7 @@ button {
     width: 12vh;
     aspect-ratio: 1 / 1;
     border-radius: 10px;
-    background-color: cadetblue;
+    background-color: #4B5563;
     font-size: 1.5rem;
     font-weight: 900;
     border: 0;
@@ -67,11 +68,11 @@ button {
 }
 
 button:hover {
-    background-color: rgb(13, 240, 248);
+    background-color: #2f363f;
 }
 
 .animate {
-  background-color: rgb(13, 240, 248);
+  background-color: #232931;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -85,5 +86,10 @@ button:focus {
     box-shadow: none;
     border: none; /* optional, if your border changes on focus */
 }
+
+#AC, #DEL {
+    color: #F87171;
+}
+
 
 
